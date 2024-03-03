@@ -154,8 +154,14 @@
 									<td class="price">Status</td>
 									<td class="quantity">Total Harga</td>
 									<td class="total"> </td>
-									<?php $no = 1; ?>
+									<?php $no = 1;
+										$total = 0;
+									?>
+
 									@foreach($pesanans as $pesanan)
+									<?php
+										$total+= $pesanan->jumlah_harga
+									?>
 									<tr>
                                 <td>{{ $no++ }}</td>
                                 <td>{{ $pesanan->tanggal }}</td>
@@ -170,7 +176,10 @@
                                
                             </tr>
 							@endforeach
-							
+								<tr>
+									<td></td><td></td><td></td>
+									<td class="fs-2 fw-bold">Total: {{$total}}</td>
+								</tr>
 										</table>
 									</thead>
 									<tbody>

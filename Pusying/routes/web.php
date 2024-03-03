@@ -8,6 +8,7 @@ use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\AuthenticateController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,7 +61,8 @@ Route::group(['middleware' => ['auth', 'checkrole:1,2']], function() {
 
 // untuk admin
 Route::group(['middleware' => ['auth', 'checkrole:1']], function() {
-    Route::resource('/products', App\Http\Controllers\ProductController::class);
+    Route::resource('/products', ProductController::class);
+    Route::get('/product/transaksi', [ProductController::class, 'transaksi']);
 });
 
 // untuk customer

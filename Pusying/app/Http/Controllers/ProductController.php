@@ -65,6 +65,7 @@ class ProductController extends Controller
             
         ]);
 
+
         return redirect()->route('products.index')->with(['success' => 'Data Berhasil Disimpan!']);
     }
 
@@ -166,5 +167,9 @@ class ProductController extends Controller
  
          //redirect to index
          return redirect()->route('products.index')->with(['success' => 'Data Berhasil Dihapus!']);
+    }
+    public function transaksi(){
+        
+        return view('products.transaksi');
     }
 }
