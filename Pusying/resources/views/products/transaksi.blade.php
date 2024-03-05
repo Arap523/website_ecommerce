@@ -15,7 +15,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @forelse ($pesanans as $pesanans, $users as $users)
+                    @forelse ($pesanans as $pesanans)
                     <tr>
                       <td class="text-left">{{ $users->name}}</td>
                       <td class="text-center">{!! $pesanans->jumlah_harga !!}</td>
