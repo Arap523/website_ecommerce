@@ -9,6 +9,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\AuthenticateController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\TransaksiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,7 +63,7 @@ Route::group(['middleware' => ['auth', 'checkrole:1,2']], function() {
 // untuk admin
 Route::group(['middleware' => ['auth', 'checkrole:1']], function() {
     Route::resource('/products', ProductController::class);
-    Route::get('/product/transaksi', [ProductController::class, 'transaksi']);
+    Route::get('/product/transaksi', [TransaksiController::class, 'index']);
 });
 
 // untuk customer

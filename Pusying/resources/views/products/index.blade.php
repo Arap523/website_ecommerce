@@ -38,7 +38,7 @@
               </a>
             </div>   
             <div class="mdc-list-item mdc-drawer-item">
-              <a class="mdc-drawer-link" href="/products/transaksi">
+              <a class="mdc-drawer-link" href="/product/transaksi">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">grid_on</i>
                 Transaksi
               </a>
