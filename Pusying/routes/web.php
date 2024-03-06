@@ -64,6 +64,7 @@ Route::group(['middleware' => ['auth', 'checkrole:1,2']], function() {
 Route::group(['middleware' => ['auth', 'checkrole:1']], function() {
     Route::resource('/products', ProductController::class);
     Route::get('/product/transaksi', [TransaksiController::class, 'index']);
+    Route::resource('/product/transaksi', TransaksiController::class);
 });
 
 // untuk customer
